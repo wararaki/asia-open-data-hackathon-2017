@@ -1,0 +1,28 @@
+{
+  "arch": "x86_64",
+  "build": "py36_0",
+  "build_number": 0,
+  "depends": [
+    "python 3.6*"
+  ],
+  "files": [
+    "lib/python3.6/site-packages/__pycache__/pyparsing.cpython-36.pyc",
+    "lib/python3.6/site-packages/pyparsing-2.1.4-py3.6.egg-info/PKG-INFO",
+    "lib/python3.6/site-packages/pyparsing-2.1.4-py3.6.egg-info/SOURCES.txt",
+    "lib/python3.6/site-packages/pyparsing-2.1.4-py3.6.egg-info/dependency_links.txt",
+    "lib/python3.6/site-packages/pyparsing-2.1.4-py3.6.egg-info/top_level.txt",
+    "lib/python3.6/site-packages/pyparsing.py"
+  ],
+  "installed_by": "Miniconda3-4.3.21-Linux-x86_64",
+  "license": "MIT",
+  "link": {
+    "source": "/home/ubuntu/workspace/main/conda/pkgs/pyparsing-2.1.4-py36_0",
+    "type": "hard-link"
+  },
+  "md5": "34b8ec2148c0e22bc8bf6ef3662f48e3",
+  "name": "pyparsing",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "url": "https://repo.continuum.io/pkgs/free/linux-64/pyparsing-2.1.4-py36_0.tar.bz2",
+  "version": "2.1.4"
+}

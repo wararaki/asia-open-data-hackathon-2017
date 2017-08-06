@@ -1,0 +1,39 @@
+==> 2017-08-05 06:02:23 <==
+# cmd: /home/ubuntu/workspace/main/conda/bin/conda create -n py3 python=3
++defaults::openssl-1.0.2l-0
++defaults::pip-9.0.1-py36_1
++defaults::python-3.6.2-0
++defaults::readline-6.2-2
++defaults::setuptools-27.2.0-py36_0
++defaults::sqlite-3.13.0-0
++defaults::tk-8.5.18-0
++defaults::wheel-0.29.0-py36_0
++defaults::xz-5.2.2-1
++defaults::zlib-1.2.8-3
+# create specs: python 3*
+==> 2017-08-05 06:02:37 <==
+# cmd: /home/ubuntu/workspace/main/conda/envs/py3/bin/conda install flask
++defaults::click-6.7-py36_0
++defaults::flask-0.12.2-py36_0
++defaults::itsdangerous-0.24-py36_0
++defaults::jinja2-2.9.6-py36_0
++defaults::markupsafe-0.23-py36_2
++defaults::werkzeug-0.12.2-py36_0
+# install specs: flask
+==> 2017-08-05 06:03:38 <==
+# cmd: /home/ubuntu/workspace/main/conda/envs/py3/bin/conda install pandas
++defaults::mkl-2017.0.3-0
++defaults::numpy-1.13.1-py36_0
++defaults::pandas-0.20.3-py36_0
++defaults::python-dateutil-2.6.1-py36_0
++defaults::pytz-2017.2-py36_0
++defaults::six-1.10.0-py36_0
+# install specs: pandas
+==> 2017-08-05 08:51:42 <==
+# cmd: /home/ubuntu/workspace/main/conda/envs/py3/bin/conda install requests
++defaults::requests-2.14.2-py36_0
+# install specs: requests
+==> 2017-08-05 15:06:49 <==
+# cmd: /home/ubuntu/workspace/main/conda/envs/py3/bin/conda install sqlalchemy
++defaults::sqlalchemy-1.1.11-py36_0
+# install specs: sqlalchemy

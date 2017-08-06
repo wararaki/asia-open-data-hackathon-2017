@@ -1,0 +1,8 @@
+https://open-data-hackathon-boaarmpit.c9users.io
+
+http://www.data.jma.go.jp/gmd/risk/obsdl/index.php
+
+http://www.data.jma.go.jp/sakura/data/
+
+
+sudo service apache2 stop
