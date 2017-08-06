@@ -14,7 +14,8 @@
             "text": "桜の名所「上野公園」で桜を楽しむ観光プランです。",
             "budget": "320円~（東京駅から上野駅までの往復交通費）",
             "plan": "上野駅から上野公園までは所要時間4分です。上野動物園や東京国立博物館も観光スポットにおすすめです。",
-            "img": "./static/img/1.png" 
+            "img": "./static/img/1.png" ,
+            "book_img":"./static/img/1.png" 
         },
         {
             "id": 2,
@@ -24,7 +25,9 @@
             "text": "桜の名所「上野公園」と日本が誇る「富士山」を巡る観光プランです。",
             "budget": "5020円~（上野駅から富士山駅までの往復交通費）",
             "plan": "上野駅から富士山駅までは電車で所要時間３時間程。上野公園で午前は桜を楽しんだ後、午後富士山に向かうのがベストです",
-            "img": "./static/img/fuji02.png" 
+            "img": "./static/img/fuji02.png" ,
+            "book_img":"./static/img/fuji02.png"
+            
         },
         {
             "id": 3,
@@ -34,7 +37,8 @@
             "text": "関西の観光名所「大阪城」の観光プランです。",
             "budget": "320円~（大阪駅から大阪城公園までの往復交通費）",
             "plan": "大阪駅から大阪城公園までは電車で所要時間１０分程度。史跡巡りにもおすすめです。",
-            "img": "./static/img/osaka_castle.png"
+            "img": "./static/img/osaka_castle.png",
+            "book_img":"./static/img/osaka_castle.png"
         }
     ]
 }

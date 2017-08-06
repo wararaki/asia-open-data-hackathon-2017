@@ -1,212 +1,83 @@
-
-<!DOCTYPE html>
-<html lang="ja">
-
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Weekend Japan</title>
-
-    <!-- Bootstrap Core CSS -->
-   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cyborg/bootstrap.min.css" rel="stylesheet" id="themesid">
-
-    <!-- Custom CSS -->
-    <link href="./static/css/book.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="./static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style>
-        body{
-            background-color: #FFF;
-        }
-        .intro-message > h1 {
-            margin: 0;
-            text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-            font-size: 5em;
-            color: #4a4a4a;
-        }
-        .intro-message > h3 {
-            text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-            color:#4a4a4a;
-        }
-        .navbar-default {
-            background-color: #f8f8f8;
-            border-color: #f8f8f8;
-        }
-        .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-            color: #888888;
-            background-color: transparent;
-        }
-        .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-            color: #888888;
-            background-color: transparent;
-        }
-        .navbar-default .navbar-brand {
-            color: #888888;
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<script type="text/javascript" src="./static/js/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="./static/js/modernizr.2.5.3.min.js"></script>
+<style>
+        .recommending_datetime{
+            padding: 0.5em 1em;
+            margin: 1em 0;
+            color :#f7979c;
+            font-size: 19px;
+            font-weight: 600;
         }
         .section-heading {
             margin-bottom: 30px;
-            color: #1dc3cd;
+            color: #000;
         }
-        .recommending_datetime{
-            color: #f15159;
-            font-size: 20px;
-            font-weight: 600;
-        }
-    </style>
+</style>
 </head>
-
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand topnav" href="#">Weekend Japan</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#"><span class="glyphicon glyphicon-book"></span> {{ data.header[0] }}</a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="glyphicon glyphicon-calendar"></span> {{ data.header[1] }}</a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="glyphicon glyphicon-list-alt"></span> {{ data.header[2] }}</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+<div class="flipbook-viewport">
+	<div class="container">
+		<div class="flipbook">
+			    
+			<div style="background-image:url(./static/img/hyoushi.jpg)"></div>
+			    {% for item in data.contents %}
+			<div style="background-image:url({{item.book_img}})"><p class="section-heading">{{ item.title}}</p><p class="lead recommending_datetime">観光するなら{{ item.datetime}}がオススメです</p></div>
+		        {% endfor %}	
+		</div>
+	</div>
+</div>
 
-    <!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header" style="padding-bottom: 100px">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message" style="height:200px;padding-top:70px;">
-                        <h1>Weekend Japan</h1>
-                        <h3>週末どこへ行く？</h3>
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons" id="select-buttons">
-                            <li>
-                                <a class="btn btn-default btn-lg" data-id="1"><span class="network-name">Ueno</span></a>
-                            </li>
-                            <li>
-                                <a class="btn btn-default btn-lg" data-id="2"><span class="network-name">Fuji</span></a>
-                            </li>
-                            <li>
-                                <a class="btn btn-default btn-lg" data-id="3"><span class="network-name">Osaka</span></a>
-                            </li>
-                        </ul>
-                        <div style="padding-top: 10px">
-                            <button class="btn btn-primary btn-lg" id="search" style="padding: 14px 100px">
-                                GO!!
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-        <!-- /.container -->
+<script type="text/javascript">
 
-    </div>
-    <div class="clearfix"></div>
-    <!-- /.intro-header -->
- 
+function loadApp() {
 
-    <!-- Page Content -->
+	// Create the flipbook
 
-	<a  name="services"></a>
+	$('.flipbook').turn({
+			// Width
 
-    <div class="content-section-b">
-        {% for item in data.contents %}
-        <div data-content-id={{ item.id }} style="display: none">
-            <div class="container">
-                <br/>
-                <div class="row">
-                    <div class="col-lg-5 col-lg-offset-1 col-sm-push-6 col-sm-6">
-                        <div class="clearfix"></div>
-                        <h2 class="section-heading">{{ item.title }}</h2>
-<!--                        <p class="lead">{{ item.text }}</p> -->
-                        <p class="lead recommending_datetime">
-                                観光するなら
-                            {{ item.datetime }}
-                            
-                            がオススメです
-                        </p>
-                        <p class="lead">予算<br/>{{ item.budget }}</p>
-                        <p class="lead">{{ item.plan }}</p>
-                    </div>
-                    <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                        <img class="img-responsive" src={{ item.img }} alt="">
-                    </div>
-                    
-                </div>
-    
-            </div>
-        </div>
-        {% endfor %}
-        <!-- /.container -->
+			width:922,
+			
+			// Height
 
-    </div>
-    <!-- /.content-section-b -->
+			height:600,
 
-    <div class="content-section-a">
+			// Elevation
 
-        <div class="container">
+			elevation: 50,
+			
+			// Enable gradients
 
-        </div>
-        <!-- /.container -->
+			gradients: true,
+			
+			// Auto center this flipbook
 
-    </div>
-    <!-- /.content-section-a -->
+			autoCenter: true
 
-	<a  name="contact"></a>
-        <!-- /.container -->
+	});
+}
 
-    </div>
-    <!-- /.banner -->
+// Load the HTML4 version if there's not CSS transform
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="copyright text-muted small">Copyright &copy; Your Company 2017. All Rights Reserved</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="./static/js/book.js?v=0.1.4"></script>
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['./static/js/turn.js'],
+	nope: ['./static/js/turn.html4.min.js'],
+	both: ['./static/css/basic.css'],
+	complete: loadApp
+});
+
+</script>
+    <script src="./static/js/book.js"></script>
 </body>
 </html>
